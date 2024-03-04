@@ -1,0 +1,41 @@
+version: '3'
+services: 
+
+  tomcat:
+    image: tomcat:9.0
+    restart: always
+    ports:
+      - "8084:8080"
+    volumes:
+      - ./target/demo.war:/usr/local/tomcat/webapps/demo.war
+    depends_on:
+      - db
+    links:
+      - db:database
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 121212
+      MYSQL_DATABASE: database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 121212
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8090:80"
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: 121212
+    restart: on-failure
+
+volumes:
+  mysql_data:
