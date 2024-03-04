@@ -1,9 +1,8 @@
-```markdown
 # Project Name
 
 ## Overview
 
-This project is a web application developed using Tomcat, MySQL, and phpMyAdmin, and it's containerized using Docker. The application is built using Maven.
+This project is a web application developed using Tomcat, MySQL, and phpMyAdmin, containerized using Docker. The application is built using Maven.
 
 ## Prerequisites
 
@@ -54,5 +53,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-hacene zerrouk - zerrouk.mohammed.hacene@gmail.com
-
+Hacene Zerrouk - zerrouk.mohammed.hacene@gmail.com
