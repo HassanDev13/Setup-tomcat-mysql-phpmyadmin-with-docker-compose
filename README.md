@@ -1,4 +1,4 @@
-# Project Name
+# Setup tomcat-mysql-phpmyadmin-with-docker-compose
 
 ## Overview
 
